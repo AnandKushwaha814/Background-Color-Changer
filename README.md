@@ -56,6 +56,23 @@ if (e.target.id === "reset") {
   body.style.backgroundColor = "";
 }
 ```
+## simplified code
+```
+const buttons = document.querySelectorAll(".button");
+const body = document.querySelector('body');
+
+buttons.forEach(button => {
+  button.addEventListener("click", (e) => {
+    const color = e.target.id;
+    if (color === "reset") {
+      body.style.backgroundColor = "";
+    } else {
+      body.style.backgroundColor = color;
+    }
+  });
+});
+```
+
 * This part checks the `id` of the button that was clicked.
 * If the `id` matches any of the specified colors (`red`,` blue`, `black`, `green`, `yellow`, `cyan`), the background color of the `body` is changed to that color.
 * If the reset button is clicked (id="reset"), the background color is reset to its default (empty string).
