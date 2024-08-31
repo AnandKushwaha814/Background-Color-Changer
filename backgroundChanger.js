@@ -29,3 +29,21 @@ buttons.forEach(function (button) {
     }
   });
 });
+
+// Simplify code
+
+
+// const buttons = document.querySelectorAll(".button");
+// const body = document.querySelector('body');
+
+// buttons.forEach(button => {
+//   button.addEventListener("click", (e) => {
+//     const color = e.target.id;
+//     if (color === "reset") {
+//       body.style.backgroundColor = "";
+//     } else {
+//       body.style.backgroundColor = color;
+//     }
+//   });
+// });
+
